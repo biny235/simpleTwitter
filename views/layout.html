@@ -1,5 +1,20 @@
 <html>
-
-
+    <head>
+        <title>{{ title }}</title>
+        <link rel='stylesheet' href="/vendor/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div class='container'>
+        <h1>{{ title }}</h1>
+        <ul class='nav nav-pills'>
+            <li class='nav-item'><a href="/" class="nav-link {% if path ==='/'%} active {% endif %}">Home</a></li>
+            <li class='nav-item'><a href="/tweets" class="nav-link {% if path === '/tweets' %} active {% endif %}">Tweets</a></li>
+        </ul>
+            <div class="jumbotron">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </body>
 
 </html>

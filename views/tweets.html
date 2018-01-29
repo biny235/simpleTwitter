@@ -1,0 +1,10 @@
+{% extends './layout.html' %}
+{% block content %}
+<h1>This is the tweets page</h1>
+    <ul>
+        {% for tweet in tweets%}
+            <li><a href="/tweets/{{tweet.id}}">{{tweet.tweet}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock  %}
